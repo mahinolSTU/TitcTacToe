@@ -1,6 +1,7 @@
 # TitcTacToe
 Project for coursework
-'''
+
+```
 class Player:
     def __init__(self, name, symbol):
         self.name = name
@@ -9,5 +10,4 @@ class Player:
     def make_move(self, board):
         raise NotImplementedError("This method must be overridden.")
 
-
-'''
+```
