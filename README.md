@@ -11,14 +11,14 @@ The Tic-Tac-Toe game is a classic two-player game implemented in Python using ob
 2. Download the tic_tac_toe.py file.
 3. Open a terminal or command prompt.
 4. Navigate to the file directory.
-5. Run the command: python tic_tac_toe.py.
+5. Run the command: python `tic_tac_toe.py`.
 
 
 ## Requirements:
 
 Ensure Python 3 is installed.
 
-Download tic_tac_toe.py and test_game.py files to your machine.
+Download `tic_tac_toe.py` and test_game.py files to your machine.
 
 ### Steps to Run:
 
