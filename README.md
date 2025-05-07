@@ -31,7 +31,11 @@ python tic_tac_toe.py
 
 # Analysis
 ## Encapsulation
-Encapsulation groups related attributes and methods into single classes and hides internal states from outside interference.
+Encapsulation is one of the four main pillars of Object-Oriented Programming (OOP). It means:
+Bundling data (variables) and the methods (functions) that work on that data into a single unit (a class), and controlling access to that data.
+In simple words:
+Internal details are kept private or protected inside a class.
+Other parts of the program interact through methods, not by changing variables directly.
 
 ### Example:
 
@@ -82,7 +86,10 @@ player2.make_move(board)
 Here, make_move behaves differently for a HumanPlayer and a ComputerPlayer, even though the method name is the same. This allows dynamic interaction in the game loop.
 
 ## Abstraction
-Abstraction hides complex logic behind simple method calls.
+Abstract refers to hiding the complex internal logic and exposing only the necessary interface.
+In Python, an abstract class is like a blueprint that other classes must follow. It cannot be used directly — only its child classes can use it by completing its structure.
+
+
 ### Example:
 ``` py
 self.board.check_winner(self.current_player.symbol)
@@ -92,6 +99,7 @@ The game doesn't need to know how the win is checked—just that check_winner() 
 ## Design Patterns
 ### 1. Factory Pattern
 Used to create player objects dynamically based on type.
+Factory Pattern is used to create objects without specifying the exact class of object that will be created.
 ### Example:
 ``` py
 def player_factory(player_type, name, symbol):
