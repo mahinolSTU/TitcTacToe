@@ -5,6 +5,15 @@ Project for coursework
 ## Application:
 The Tic-Tac-Toe game is a classic two-player game implemented in Python using object-oriented programming (OOP). One player is human, and the other is a computer opponent. Players take turns placing their marks (X or O) on a 3×3 grid. The goal is to align three marks in a row, column, or diagonal. The game ends with a win or a draw.
 # Run Program
+
+
+1. Ensure Python 3 is installed.
+2. Download the tic_tac_toe.py file.
+3. Open a terminal or command prompt.
+4. Navigate to the file directory.
+5. Run the command: python tic_tac_toe.py.
+
+
 ## Requirements:
 
 Ensure Python 3 is installed.
@@ -90,8 +99,8 @@ def play(self):
 player1.make_move(board)
 player2.make_move(board)
 ```
--If `current_player` is a `HumanPlayer`, it takes user input.
--If it is a `ComputerPlayer`, it chooses a random empty spot.
+1. If `current_player` is a `HumanPlayer`, it takes user input.
+2. If it is a `ComputerPlayer`, it chooses a random empty spot.
 Same method name, different behavior.
 
 ## Abstraction
@@ -138,41 +147,41 @@ Both use the `make_move()` method but follow different strategies.
 
 ### Achievements:
 
--Successfully implemented a turn-based game with AI.
--Clean code using OOP design.
--Game results saved to file.
+1. Successfully implemented a turn-based game with AI.
+2. Clean code using OOP design.
+3. Game results saved to file.
 
 ### Challenges:
 
--Managing game state and win-check logic.
--Ensuring proper separation between game logic and UI.
--Handling input validation.
+1. Managing game state and win-check logic.
+2. Ensuring proper separation between game logic and UI.
+3. Handling input validation.
 
 ### Game Logic:
 
--Each move is validated.
--Win condition checked after every move.
--Draw detected if board is full.
--Final board written to `game_history.txt`.
+1. Each move is validated.
+2. Win condition checked after every move.
+3. Draw detected if board is full.
+4. Final board written to `game_history.txt`.
 
 ## Conclusion
 #### Key Findings:
 
--The game successfully applied all 4 OOP pillars: Encapsulation, Inheritance, Polymorphism, and Abstraction.
--Factory and Strategy patterns allowed clean, scalable design.
--Testing and file I/O enhanced the project’s robustness and usability.
+1. The game successfully applied all 4 OOP pillars: Encapsulation, Inheritance, Polymorphism, and Abstraction.
+2. Factory and Strategy patterns allowed clean, scalable design.
+3. Testing and file I/O enhanced the project’s robustness and usability.
 
 #### Achievements:
 
--Clean, modular code
--Easy to extend in the future (GUI, multiplayer)
--GitHub-ready with testing support
+1. Clean, modular code
+2. Easy to extend in the future (GUI, multiplayer)
+3. GitHub-ready with testing support
 
 #### Future Prospects:
 
--Add GUI using tkinter or pygame
--Add difficulty levels to computer player
--Implement multiplayer over network
--Add scoreboard or online leaderboard
+1. Add GUI using tkinter or pygame
+2. Add difficulty levels to computer player
+3. Implement multiplayer over network
+4. Add scoreboard or online leaderboard
 
 
