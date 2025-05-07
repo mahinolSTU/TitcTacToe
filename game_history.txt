@@ -1,0 +1,5 @@
+Game finished:
+X | X | X
+O |   |  
+  | O |  
+
