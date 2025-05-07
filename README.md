@@ -24,18 +24,18 @@ python tic_tac_toe.py
 4. The game will launch in the terminal. Use number keys (1–9) to choose your move.
 
 # Use of Program
--Human player selects positions by entering numbers 1–9.
--The computer player responds automatically.
--The game ends when either player wins or when the board is full (draw).
--Game result is saved to a file named game_history.txt.
+1. Human player selects positions by entering numbers 1–9.
+2. The computer player responds automatically.
+3. The game ends when either player wins or when the board is full (draw).
+4. Game result is saved to a file named game_history.txt.
 
 # Analysis
 The Tic-Tac-Toe game demonstrates OOP principles and design patterns in Python. It includes:
--Encapsulation
--Inheritance
--Polymorphism
--Abstraction
--Factory and Strategy Design Patterns
+1. Encapsulation
+2. Inheritance
+3. Polymorphism
+4. Abstraction
+5. Factory and Strategy Design Patterns
 ## Encapsulation
 Encapsulation is one of the four main pillars of Object-Oriented Programming (OOP). It means:
 Bundling data (variables) and the methods (functions) that work on that data into a single unit (a class), and controlling access to that data.
