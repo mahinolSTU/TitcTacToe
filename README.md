@@ -1,7 +1,7 @@
 # TitcTacToe
 Project for coursework
 
-```
+``` py
 class Player:
     def __init__(self, name, symbol):
         self.name = name
