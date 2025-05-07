@@ -30,6 +30,12 @@ python tic_tac_toe.py
 -Game result is saved to a file named game_history.txt.
 
 # Analysis
+The Tic-Tac-Toe game demonstrates OOP principles and design patterns in Python. It includes:
+-Encapsulation
+-Inheritance
+-Polymorphism
+-Abstraction
+-Factory and Strategy Design Patterns
 ## Encapsulation
 Encapsulation is one of the four main pillars of Object-Oriented Programming (OOP). It means:
 Bundling data (variables) and the methods (functions) that work on that data into a single unit (a class), and controlling access to that data.
@@ -44,19 +50,17 @@ class Board:
     def __init__(self):
         self.board = [" "] * 9
 
-    def display(self):
-        # Prints the board
-
     def update(self, position, symbol):
-        # Updates a position
+        self.board[position] = symbol
+
+    def display(self):
+        # prints the board layout
 
     def is_full(self):
-        # Checks if full
-
-    def check_winner(self, symbol):
+        return " " not in self.board
         # Checks for win
 ```
-All board-related logic is encapsulated in the Board class. Other classes cannot directly modify its data without going through its methods.
+The `Board` class manages board data privately. Other classes access it only through methods like `update()`, `is_full()`, `or display()`.
 ## Inheritance
 Inheritance lets us reuse code from a base class in derived classes.
 
@@ -74,16 +78,21 @@ class ComputerPlayer(Player):
     def make_move(self, board):
         # Chooses random move
 ```
-Both HumanPlayer and ComputerPlayer inherit from Player, allowing reuse of common logic and enforcing a consistent interface.
+Both `HumanPlayer` and `ComputerPlayer` inherit from `Player`, allowing reuse of common logic and enforcing a consistent interface. override the abstract `make_move()` method.
 ## Polymorphism
 Polymorphism allows the same method (make_move) to behave differently depending on the object calling it.
 
 ### Example:
 ``` py
+def play(self):
+    position = self.current_player.make_move(self.board.board)
+#or
 player1.make_move(board)
 player2.make_move(board)
 ```
-Here, make_move behaves differently for a HumanPlayer and a ComputerPlayer, even though the method name is the same. This allows dynamic interaction in the game loop.
+-If `current_player` is a `HumanPlayer`, it takes user input.
+-If it is a `ComputerPlayer`, it chooses a random empty spot.
+Same method name, different behavior.
 
 ## Abstraction
 Abstract refers to hiding the complex internal logic and exposing only the necessary interface.
@@ -94,12 +103,11 @@ In Python, an abstract class is like a blueprint that other classes must follow.
 ``` py
 self.board.check_winner(self.current_player.symbol)
 ```
-The game doesn't need to know how the win is checked—just that check_winner() tells whether the current player has won.
+The game doesn't need to know how the win is checked—just that `check_winner()` tells whether the current player has won.
 
 ## Design Patterns
 ### 1. Factory Pattern
-Used to create player objects dynamically based on type.
-Factory Pattern is used to create objects without specifying the exact class of object that will be created.
+The factory pattern is used to create objects without specifying their exact class.
 ### Example:
 ``` py
 def player_factory(player_type, name, symbol):
@@ -108,84 +116,63 @@ def player_factory(player_type, name, symbol):
     elif player_type == "computer":
         return ComputerPlayer(name, symbol)
 ```
-This decouples object creation from game logic.
+Depending on `player_type`, it creates and returns the appropriate player class.
 
 ### 2. Strategy Pattern
 Used by polymorphism: Human and Computer players follow different "strategies" for moves but use the same method name (make_move).
 
-## File I/O
-The game saves completed match data into a text file (game_history.txt), allowing for later viewing or analysis.
-### Example:
 ``` py
-with open("game_history.txt", "a") as file:
-    file.write("Game finished:\n")
+lass HumanPlayer(Player):
+    def make_move(self, board):
+        # takes user input
+
+class ComputerPlayer(Player):
+    def make_move(self, board):
+        # selects random move
 ```
-## Testing
-Unit tests ensure that the logic works correctly:
+Both use the `make_move()` method but follow different strategies.
 
-check_winner() returns True when there’s a win
 
-is_full() returns True for a draw
 
-Implemented using Python’s built-in unittest module in test_game.py.
+# Result
 
-## GitHub Upload
-Version control is handled using Git:
-
-Initialized repo with git init
-
-Committed changes regularly
-
-Pushed to GitHub for public access and collaboration
-
-## Result
 ### Achievements:
 
-Fully playable terminal-based game
-
-Supports human vs computer
-
-Implements OOP principles and design patterns
-
-Saves game history to file
-
-Simple test cases added
+-Successfully implemented a turn-based game with AI.
+-Clean code using OOP design.
+-Game results saved to file.
 
 ### Challenges:
 
-Designing clean abstraction between game loop and board logic
+-Managing game state and win-check logic.
+-Ensuring proper separation between game logic and UI.
+-Handling input validation.
 
-Implementing and testing win logic
+### Game Logic:
 
-Learning and applying design patterns
-
-Git version control (commit/push structure)
+-Each move is validated.
+-Win condition checked after every move.
+-Draw detected if board is full.
+-Final board written to `game_history.txt`.
 
 ## Conclusion
 #### Key Findings:
 
-The game successfully applied all 4 OOP pillars: Encapsulation, Inheritance, Polymorphism, and Abstraction.
-
-Factory and Strategy patterns allowed clean, scalable design.
-
-Testing and file I/O enhanced the project’s robustness and usability.
+-The game successfully applied all 4 OOP pillars: Encapsulation, Inheritance, Polymorphism, and Abstraction.
+-Factory and Strategy patterns allowed clean, scalable design.
+-Testing and file I/O enhanced the project’s robustness and usability.
 
 #### Achievements:
 
-Clean, modular code
-
-Easy to extend in the future (GUI, multiplayer)
-
-GitHub-ready with testing support
+-Clean, modular code
+-Easy to extend in the future (GUI, multiplayer)
+-GitHub-ready with testing support
 
 #### Future Prospects:
 
-Add GUI using tkinter or pygame
-
-Add difficulty levels to computer player
-
-Implement multiplayer over network
-
-Add scoreboard or online leaderboard
+-Add GUI using tkinter or pygame
+-Add difficulty levels to computer player
+-Implement multiplayer over network
+-Add scoreboard or online leaderboard
 
 
